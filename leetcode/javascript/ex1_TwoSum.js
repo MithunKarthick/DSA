@@ -20,21 +20,24 @@
 
 /* Solution 1 */
 
-var nums = [2,7,11,15];
-var target = 9;
+var nums = [3, 2, 4];
+var target = 6;
 
-var twoSum = function(nums, target) {
-    var result = [];
-    for( var i = 0; i<nums.length; i++){
-        for(var j = 0; i<nums.length; i++){
-            if ( ( nums[i] + nums[j] ) === target ){
-                result.push(i);
-                result.push(j);
-                break;
-            }
-        }
-        return result;
+var twoSum = function (nums, target) {
+  var result = [];
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = 0; j < nums.length; j++) {
+      if ( i != j && nums[i] + nums[j] === target) {
+        result.push(i);
+        result.push(j);
+        break;
+      }
     }
+    if (result.length > 0) {
+        break;
+    }
+  }
+  return result;
 };
 
 console.log(twoSum(nums, target));
