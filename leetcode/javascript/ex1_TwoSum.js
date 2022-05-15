@@ -18,12 +18,11 @@
 //Input: nums = [3,3], target = 6
 //Output: [0,1]
 
+var nums = [2,5,5,11];
+var target = 10;
+
 /* Solution 1 */
-
-var nums = [3, 2, 4];
-var target = 6;
-
-var twoSum = function (nums, target) {
+var twoSum1 = function (nums, target) {
   var result = [];
   for (var i = 0; i < nums.length; i++) {
     for (var j = 0; j < nums.length; j++) {
@@ -39,5 +38,24 @@ var twoSum = function (nums, target) {
   }
   return result;
 };
+// Time complexity = O(n^2)
+// Space complexity = O(1)
+console.log(twoSum1(nums, target));
 
-console.log(twoSum(nums, target));
+/* Solution 2 */
+
+let twoSum2 = (nums, target) => {
+  let map = {};
+  nums.forEach((element,index) => {
+      map[element] = index;
+  });
+  for( let i = 0; i < nums.length; i++){
+    let search = target - nums[i];
+    if(map[search] && map[search] !== i){
+      return [i,map[search]];
+    }
+  }
+}
+// Time complexity = O(n)
+// Space complexity = O(n)
+console.log(twoSum2(nums, target));
