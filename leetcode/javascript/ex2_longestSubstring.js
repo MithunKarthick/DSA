@@ -24,4 +24,8 @@
 // 0 <= s.length <= 5 * 104
 // s consists of English letters, digits, symbols and spaces.
 // " " "aab"
-let s = "pwwkew";
+let text = "pwwkew";
+
+  
+  
+  
