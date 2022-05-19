@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch addTwoNumbers",
+            "request": "launch",
+            "mainClass": "leetcode/com.leetcode.addTwoNumbers",
+            "projectName": "leetcode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "leetcode/com.leetcode.Solution",
+            "projectName": "leetcode"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
